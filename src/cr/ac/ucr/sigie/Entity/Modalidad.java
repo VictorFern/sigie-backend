@@ -1,5 +1,8 @@
 package cr.ac.ucr.sigie.Entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Modalidad {
     private int modalidadId;
     private String tipoModalidad;
