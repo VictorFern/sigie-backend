@@ -1,14 +1,21 @@
 package cr.ac.ucr.sigie.Entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class UnidadAcademica {
 
    private int unidadAcademicaId;
    private String tipoUnidadAcademica;
+   private List<Curso> curosPropios;
+    private List<PlanEstudio> planEstudios;
 
 
     public UnidadAcademica() {
         this.unidadAcademicaId = 0;
         this.tipoUnidadAcademica = "";
+        this.curosPropios = new ArrayList<Curso>();
+        this.planEstudios = new ArrayList<PlanEstudio>();
     }
 
 
