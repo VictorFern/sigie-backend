@@ -1,5 +1,8 @@
 package cr.ac.ucr.sigie.Entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PlanEstudio {
 
 
@@ -9,6 +12,7 @@ public class PlanEstudio {
     private  int cantidadCiclos;
     private  int codigoCarrera;
     private String nombreCarrera;
+    private List<UnidadAcademica> unidadAcademicaPropietarias;
 
 
     public PlanEstudio() {
@@ -18,6 +22,7 @@ public class PlanEstudio {
         this.cantidadCiclos = 0;
         this.codigoCarrera = 0;
         this.nombreCarrera = "";
+        this.unidadAcademicaPropietarias = new ArrayList<UnidadAcademica>();
     }
 
     public PlanEstudio(int planEstudioId, String nombre, int anoAprovacion, int cantidadCiclos, int codigoCarrera, String nombreCarrera) {
