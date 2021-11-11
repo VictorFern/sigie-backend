@@ -25,7 +25,8 @@ public class Curso {
     private Modalidad modalidad;
     private ArrayList<Contenido> contenidos;
     private ArrayList<UnidadAcademica> unidadAcademicaPropetarias;
-
+    private ArrayList<Enfasis> enfasis;
+    
 
     public Curso() {
         this.cursoId = 0;
@@ -49,10 +50,11 @@ public class Curso {
         this.modalidad = null;
         this.contenidos = null;
         this.unidadAcademicaPropetarias = null;
+        this.enfasis = null;
     }
 
 
-    public Curso(int cursoId, String nombre, int ciclo, String sigla, int creditos, String objetivoGeneral, int anoEnQueSeImparte, int horasTeoria, int horasPractica, int horasLaboratorio, int horasTeoriaPractica, ArrayList<Curso> electivos, ArrayList<Curso> requisitos, ArrayList<Curso> correquisitos, Area area, ArrayList<ResultadoAprendizaje> resultadoAprendizaje, ArrayList<ItemDescripcion> itemesDescripcion, ArrayList<ReferenciaBibliografica> referencias, Modalidad modalidad, ArrayList<Contenido> contenidos, ArrayList<UnidadAcademica> unidadAcademicaPropetarias) {
+    public Curso(int cursoId, String nombre, int ciclo, String sigla, int creditos, String objetivoGeneral, int anoEnQueSeImparte, int horasTeoria, int horasPractica, int horasLaboratorio, int horasTeoriaPractica, ArrayList<Curso> electivos, ArrayList<Curso> requisitos, ArrayList<Curso> correquisitos, Area area, ArrayList<ResultadoAprendizaje> resultadoAprendizaje, ArrayList<ItemDescripcion> itemesDescripcion, ArrayList<ReferenciaBibliografica> referencias, Modalidad modalidad, ArrayList<Contenido> contenidos, ArrayList<UnidadAcademica> unidadAcademicaPropetarias, ArrayList<Enfasis> enfasis) {
         this.cursoId = cursoId;
         this.nombre = nombre;
         this.ciclo = ciclo;
@@ -74,6 +76,7 @@ public class Curso {
         this.modalidad = modalidad;
         this.contenidos = contenidos;
         this.unidadAcademicaPropetarias = unidadAcademicaPropetarias;
+        this.enfasis = enfasis;
     }
 
     public int getCursoId() {
@@ -242,5 +245,13 @@ public class Curso {
 
     public void setUnidadAcademicaPropetarias(ArrayList<UnidadAcademica> unidadAcademicaPropetarias) {
         this.unidadAcademicaPropetarias = unidadAcademicaPropetarias;
+    }
+
+    public ArrayList<Enfasis> getEnfasis() {
+        return enfasis;
+    }
+
+    public void setEnfasis(ArrayList<Enfasis> enfasis) {
+        this.enfasis = enfasis;
     }
 }
