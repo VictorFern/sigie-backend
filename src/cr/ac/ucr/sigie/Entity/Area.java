@@ -15,9 +15,18 @@ public class Area {
         this.cursos = new ArrayList<Curso>();
     }
 
-    public Area(int areaid, String nombre) {
+    public List<Curso> getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(List<Curso> cursos) {
+        this.cursos = cursos;
+    }
+
+    public Area(int areaid, String nombre, List<Curso> cursos) {
         this.areaid = areaid;
         this.nombre = nombre;
+        this.cursos = cursos;
     }
 
     public int getAreaid() {
