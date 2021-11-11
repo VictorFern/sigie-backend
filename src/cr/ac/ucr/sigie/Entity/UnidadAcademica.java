@@ -19,9 +19,27 @@ public class UnidadAcademica {
     }
 
 
-    public UnidadAcademica(int unidadAcademicaId, String tipoUnidadAcademica) {
+    public List<Curso> getCurosPropios() {
+        return curosPropios;
+    }
+
+    public void setCurosPropios(List<Curso> curosPropios) {
+        this.curosPropios = curosPropios;
+    }
+
+    public List<PlanEstudio> getPlanEstudios() {
+        return planEstudios;
+    }
+
+    public void setPlanEstudios(List<PlanEstudio> planEstudios) {
+        this.planEstudios = planEstudios;
+    }
+
+    public UnidadAcademica(int unidadAcademicaId, String tipoUnidadAcademica, List<Curso> curosPropios, List<PlanEstudio> planEstudios) {
         this.unidadAcademicaId = unidadAcademicaId;
         this.tipoUnidadAcademica = tipoUnidadAcademica;
+        this.curosPropios = curosPropios;
+        this.planEstudios = planEstudios;
     }
 
     public int getUnidadAcademicaId() {

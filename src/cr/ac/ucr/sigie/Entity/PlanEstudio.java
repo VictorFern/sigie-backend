@@ -13,6 +13,7 @@ public class PlanEstudio {
     private  int codigoCarrera;
     private String nombreCarrera;
     private List<UnidadAcademica> unidadAcademicaPropietarias;
+    private List<Enfasis> enfasis;
 
 
     public PlanEstudio() {
@@ -23,15 +24,18 @@ public class PlanEstudio {
         this.codigoCarrera = 0;
         this.nombreCarrera = "";
         this.unidadAcademicaPropietarias = new ArrayList<UnidadAcademica>();
+        this.enfasis = new ArrayList<Enfasis>();
     }
 
-    public PlanEstudio(int planEstudioId, String nombre, int anoAprovacion, int cantidadCiclos, int codigoCarrera, String nombreCarrera) {
+    public PlanEstudio(int planEstudioId, String nombre, int anoAprovacion, int cantidadCiclos, int codigoCarrera, String nombreCarrera, List<UnidadAcademica> unidadAcademicaPropietarias, List<Enfasis> enfasis) {
         this.planEstudioId = planEstudioId;
         this.nombre = nombre;
         this.anoAprovacion = anoAprovacion;
         this.cantidadCiclos = cantidadCiclos;
         this.codigoCarrera = codigoCarrera;
         this.nombreCarrera = nombreCarrera;
+        this.unidadAcademicaPropietarias = unidadAcademicaPropietarias;
+        this.enfasis = enfasis;
     }
 
     public int getPlanEstudioId() {
@@ -80,5 +84,21 @@ public class PlanEstudio {
 
     public void setNombreCarrera(String nombreCarrera) {
         this.nombreCarrera = nombreCarrera;
+    }
+
+    public List<UnidadAcademica> getUnidadAcademicaPropietarias() {
+        return unidadAcademicaPropietarias;
+    }
+
+    public void setUnidadAcademicaPropietarias(List<UnidadAcademica> unidadAcademicaPropietarias) {
+        this.unidadAcademicaPropietarias = unidadAcademicaPropietarias;
+    }
+
+    public List<Enfasis> getEnfasis() {
+        return enfasis;
+    }
+
+    public void setEnfasis(List<Enfasis> enfasis) {
+        this.enfasis = enfasis;
     }
 }
