@@ -26,7 +26,8 @@ public class Curso {
     private ArrayList<Contenido> contenidos;
     private ArrayList<UnidadAcademica> unidadAcademicaPropetarias;
     private ArrayList<Enfasis> enfasis;
-    
+
+
 
     public Curso() {
         this.cursoId = 0;
@@ -245,13 +246,5 @@ public class Curso {
 
     public void setUnidadAcademicaPropetarias(ArrayList<UnidadAcademica> unidadAcademicaPropetarias) {
         this.unidadAcademicaPropetarias = unidadAcademicaPropetarias;
-    }
-
-    public ArrayList<Enfasis> getEnfasis() {
-        return enfasis;
-    }
-
-    public void setEnfasis(ArrayList<Enfasis> enfasis) {
-        this.enfasis = enfasis;
     }
 }
