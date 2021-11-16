@@ -12,9 +12,11 @@ public class PlanEstudio {
     private  int cantidadCiclos;
     private  int codigoCarrera;
     private String nombreCarrera;
-    private List<UnidadAcademica> unidadAcademicaPropietarias;
-    private List<Enfasis> enfasis;
-    private List<ItemPerfilSalida> itemesPerfilSalida;
+    private ArrayList<UnidadAcademica> unidadAcademicaPropietarias;
+    private ArrayList<Enfasis> enfasis;
+    private ArrayList<ItemPerfilSalida> itemesPerfilSalida;
+    private ArrayList<ItemPerfilEntrada> itemesPerfilEntrada;
+    private Grado grado;
 
 
     public PlanEstudio() {
@@ -27,9 +29,11 @@ public class PlanEstudio {
         this.unidadAcademicaPropietarias = new ArrayList<UnidadAcademica>();
         this.enfasis = new ArrayList<Enfasis>();
         this.itemesPerfilSalida = new ArrayList<ItemPerfilSalida>();
+        this.itemesPerfilEntrada = new ArrayList<ItemPerfilEntrada>();
+        this.grado = null;
     }
 
-    public PlanEstudio(int planEstudioId, String nombre, int anoAprovacion, int cantidadCiclos, int codigoCarrera, String nombreCarrera, List<UnidadAcademica> unidadAcademicaPropietarias, List<Enfasis> enfasis) {
+    public PlanEstudio(int planEstudioId, String nombre, int anoAprovacion, int cantidadCiclos, int codigoCarrera, String nombreCarrera, ArrayList<UnidadAcademica> unidadAcademicaPropietarias, ArrayList<Enfasis> enfasis, ArrayList<ItemPerfilSalida> itemesPerfilSalida, ArrayList<ItemPerfilEntrada> itemesPerfilEntrada, Grado grado) {
         this.planEstudioId = planEstudioId;
         this.nombre = nombre;
         this.anoAprovacion = anoAprovacion;
@@ -38,6 +42,9 @@ public class PlanEstudio {
         this.nombreCarrera = nombreCarrera;
         this.unidadAcademicaPropietarias = unidadAcademicaPropietarias;
         this.enfasis = enfasis;
+        this.itemesPerfilSalida = itemesPerfilSalida;
+        this.itemesPerfilEntrada = itemesPerfilEntrada;
+        this.grado = grado;
     }
 
     public int getPlanEstudioId() {
@@ -92,7 +99,7 @@ public class PlanEstudio {
         return unidadAcademicaPropietarias;
     }
 
-    public void setUnidadAcademicaPropietarias(List<UnidadAcademica> unidadAcademicaPropietarias) {
+    public void setUnidadAcademicaPropietarias(ArrayList<UnidadAcademica> unidadAcademicaPropietarias) {
         this.unidadAcademicaPropietarias = unidadAcademicaPropietarias;
     }
 
@@ -100,7 +107,7 @@ public class PlanEstudio {
         return enfasis;
     }
 
-    public void setEnfasis(List<Enfasis> enfasis) {
+    public void setEnfasis(ArrayList<Enfasis> enfasis) {
         this.enfasis = enfasis;
     }
 
@@ -108,7 +115,23 @@ public class PlanEstudio {
         return itemesPerfilSalida;
     }
 
-    public void setItemesPerfilSalida(List<ItemPerfilSalida> itemesPerfilSalida) {
+    public void setItemesPerfilSalida(ArrayList<ItemPerfilSalida> itemesPerfilSalida) {
         this.itemesPerfilSalida = itemesPerfilSalida;
+    }
+
+    public ArrayList<ItemPerfilEntrada> getItemesPerfilEntrada() {
+        return itemesPerfilEntrada;
+    }
+
+    public void setItemesPerfilEntrada(ArrayList<ItemPerfilEntrada> itemesPerfilEntrada) {
+        this.itemesPerfilEntrada = itemesPerfilEntrada;
+    }
+
+    public Grado getGrado() {
+        return grado;
+    }
+
+    public void setGrado(Grado grado) {
+        this.grado = grado;
     }
 }
