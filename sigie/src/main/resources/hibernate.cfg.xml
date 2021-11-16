@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+
+
+    <property name = "hibernate.connection.driver_class">
+      com.mysql.cj.jdbc.Driver
+    </property>
+
+    <property name = "hibernate.connection.url">
+      jdbc:mysql://163.178.107.10:3306/proyecto_analisis_sigie
+    </property>
+
+    <property name = "hibernate.connection.username">
+      laboratorios
+    </property>
+
+    <property name = "hibernate.connection.password">
+      KmZpo.2796
+    </property>
+
+    <property name="hibernate.hbm2ddl.auto">
+      update
+    </property>
+
+    <mapping class="cr.ac.ucr.sigie.Entity.Area"/>
+    <mapping class="cr.ac.ucr.sigie.Entity.Contenido"/>
+    <mapping class="cr.ac.ucr.sigie.Entity.Curso"/>
+    <mapping class="cr.ac.ucr.sigie.Entity.Enfasis"/>
+    <mapping class="cr.ac.ucr.sigie.Entity.ItemDescripcion"/>
+    <mapping class="cr.ac.ucr.sigie.Entity.Modalidad"/>
+    <mapping class="cr.ac.ucr.sigie.Entity.PlanEstudio"/>
+    <mapping class="cr.ac.ucr.sigie.Entity.ReferenciaBibliografica"/>
+    <mapping class="cr.ac.ucr.sigie.Entity.ResultadoAprendizaje"/>
+    <mapping class="cr.ac.ucr.sigie.Entity.SubContenido"/>
+    <mapping class="cr.ac.ucr.sigie.Entity.UnidadAcademica"/>
+  </session-factory>
+</hibernate-configuration>
