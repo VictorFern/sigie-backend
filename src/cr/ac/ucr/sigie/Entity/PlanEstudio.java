@@ -14,6 +14,7 @@ public class PlanEstudio {
     private String nombreCarrera;
     private List<UnidadAcademica> unidadAcademicaPropietarias;
     private List<Enfasis> enfasis;
+    private List<ItemPerfilSalida> itemesPerfilSalida;
 
 
     public PlanEstudio() {
@@ -25,6 +26,7 @@ public class PlanEstudio {
         this.nombreCarrera = "";
         this.unidadAcademicaPropietarias = new ArrayList<UnidadAcademica>();
         this.enfasis = new ArrayList<Enfasis>();
+        this.itemesPerfilSalida = new ArrayList<ItemPerfilSalida>();
     }
 
     public PlanEstudio(int planEstudioId, String nombre, int anoAprovacion, int cantidadCiclos, int codigoCarrera, String nombreCarrera, List<UnidadAcademica> unidadAcademicaPropietarias, List<Enfasis> enfasis) {
@@ -100,5 +102,13 @@ public class PlanEstudio {
 
     public void setEnfasis(List<Enfasis> enfasis) {
         this.enfasis = enfasis;
+    }
+
+    public List<ItemPerfilSalida> getItemesPerfilSalida() {
+        return itemesPerfilSalida;
+    }
+
+    public void setItemesPerfilSalida(List<ItemPerfilSalida> itemesPerfilSalida) {
+        this.itemesPerfilSalida = itemesPerfilSalida;
     }
 }
